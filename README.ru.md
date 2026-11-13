@@ -1,3 +1,6 @@
+### 2. Файл `README.ru.md` (Русский)
+
+````text
 [English](README.md) | [Русский](README.ru.md)
 
 # Практики саморегуляции (Relaxation Practice)
@@ -37,5 +40,3 @@ PWA для дыхательных практик, заземления и сня
 git clone https://github.com/meta-architectG/relaxation-practice.git
 npm install
 npm run dev
-
- 
