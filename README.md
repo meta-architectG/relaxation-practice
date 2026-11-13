@@ -2,7 +2,7 @@
 
 # Relaxation Practice
 
-A PWA (Progressive Web App) for breathing exercises, stress relief, and grounding. Built with a focus on clean architecture, accessibility (A11y), performance, and smooth micro-interactions.
+A Progressive Web App for breathing exercises, stress relief, and grounding. Built with React, Vite, and a focus on clean architecture, accessibility (A11y), and smooth micro-interactions.
 
 ## Live Demo
 
@@ -12,28 +12,28 @@ A PWA (Progressive Web App) for breathing exercises, stress relief, and groundin
 
 - **Core:** React 19 (Hooks, Portals)
 - **Build Tool:** Vite
-- **Styling:** Vanilla CSS (CSS variables, Grid/Flexbox, fully responsive)
+- **Styling:** Vanilla CSS (CSS variables, Grid/Flexbox, responsive design)
 - **Testing:** Vitest, React Testing Library, JSDOM
-- **PWA:** `vite-plugin-pwa` (installable on home screen, auto-update)
+- **PWA:** `vite-plugin-pwa` (installable, auto-update)
 - **Analytics:** Top.Mail.Ru (VK)
 
-## Implemented Features
+## Features
 
-- **Breathing Practice:** Custom timer with high precision (50ms tick), SVG progress ring synchronization, and `Wake Lock API` to prevent screen sleep.
-- **Grounding Practice:** Interactive UI with random color generation, 5-step counting logic, and reset functionality.
-- **Progressive Muscle Relaxation:** Step-by-step guide with automated timers for tension (5s) and relaxation (15s) phases.
-- **Letting Go of Thoughts:** Input form with a fade-out animation simulating the destruction of negative thoughts.
-- **PWA Support:** Fully installable on iOS/Android home screens with automatic updates via Service Worker.
-- **Responsive Design:** Adapted for all devices from 320px mobile screens to 4K monitors.
+- **Breathing Practice**: Custom timer with 50ms precision, synced with an SVG progress ring. Uses the Wake Lock API to keep the screen on.
+- **Grounding Practice**: Interactive UI with random color generation, a 5-step counting logic, and a reset button.
+- **Muscle Relaxation**: Step-by-step guide with automated timers for tension (5s) and relaxation (15s) phases.
+- **Letting Go of Thoughts**: Input form with a fade-out animation to simulate releasing negative thoughts.
+- **PWA Ready**: Fully installable on iOS/Android with automatic Service Worker updates.
+- **Responsive**: Works properly on everything from 320px mobile screens to 4K monitors.
 
-## Architectural Decisions
+## Architecture & Code Quality
 
-- **Separation of Concerns:** All business logic is extracted into custom hooks (`useBreathingTimer`, `useLockBodyScroll`), keeping UI components clean and focused on rendering.
-- **A11y (Accessibility):**
-  - Full focus trap in modals and `Escape` key support.
+- **Separation of Concerns**: Business logic is extracted into custom hooks (`useBreathingTimer`, `useLockBodyScroll`). UI components stay clean and focused on rendering.
+- **Accessibility (A11y)**:
+  - Modals have a full focus trap and close on the `Escape` key.
   - `prefers-reduced-motion` support to disable animations for users with vestibular disorders.
-  - Semantic HTML and correct `aria-label` attributes.
-- **Testing:** 11 tests written covering critical paths (unit tests for hooks, integration tests for navigation, UI tests for modals and forms).
+  - Semantic HTML and `aria-label` attributes.
+- **Testing**: 11 tests written (unit for hooks, integration for navigation, UI for modals/forms).
 
 ## Getting Started Locally
 
@@ -46,4 +46,5 @@ npm install
 
 # 3. Start the dev server
 npm run dev
-```
+
+
