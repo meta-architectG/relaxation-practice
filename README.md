@@ -1,41 +1,49 @@
-# Практики саморегуляции (Relaxation Practice) 🧘‍♀️
+[English](README.md) | [Русский](README.ru.md)
 
-Веб-приложение (PWA) для дыхательных практик, снятия стресса и заземления. Проект создан с фокусом на чистую архитектуру, доступность (A11y), производительность и плавные микро-анимации.
+# Relaxation Practice
 
-## 🔗 Живая демонстрация
+A PWA (Progressive Web App) for breathing exercises, stress relief, and grounding. Built with a focus on clean architecture, accessibility (A11y), performance, and smooth micro-interactions.
 
-👉 **[Посмотреть работающее приложение](ВСТАВЬ_СЮДА_ССЫЛКУ_ОТ_VERCEL_ПОСЛЕ_ДЕПЛОЯ)**
+## Live Demo
 
-## 🛠 Стек технологий
+[View the live application](https://relaxation-practice.layero.app)
+
+## Tech Stack
 
 - **Core:** React 19 (Hooks, Portals)
-- **Сборка:** Vite
-- **Стилизация:** Vanilla CSS (CSS-переменные, Grid/Flexbox, полная адаптивность от мобильных до 4K)
-- **Тестирование:** Vitest, React Testing Library, JSDOM
-- **PWA:** `vite-plugin-pwa` (установка на домашний экран, автообновление)
-- **Аналитика:** Top.Mail.Ru (VK)
+- **Build Tool:** Vite
+- **Styling:** Vanilla CSS (CSS variables, Grid/Flexbox, fully responsive)
+- **Testing:** Vitest, React Testing Library, JSDOM
+- **PWA:** `vite-plugin-pwa` (installable on home screen, auto-update)
+- **Analytics:** Top.Mail.Ru (VK)
 
-## ✨ Ключевые фичи и архитектурные решения
+## Implemented Features
 
-- **Разделение логики и UI:** Вся бизнес-логика вынесена в кастомные хуки.
-  - `useBreathingTimer` — управляет дыхательным циклом с высокой точностью, синхронизирует SVG-прогресс-бар и использует `Wake Lock API`, чтобы экран телефона не гас во время практики.
-  - `useLockBodyScroll` — блокирует прокрутку фона при открытии модальных окон, сохраняя позицию скролла.
-- **A11y (Доступность):**
-  - Модальные окна имеют полноценный Focus Trap и закрываются по клавише `Escape`.
-  - Реализована поддержка `prefers-reduced-motion` для пользователей с вестибулярными нарушениями (отключает анимации на системном уровне).
-  - Семантическая верстка и корректные `aria-label`.
-- **Тестирование:** Покрыты критически важные элементы системы. Написано **11 тестов** (юнит-тесты для хуков, интеграционные тесты для навигации, UI-тесты для модалок и форм ввода).
-- **UX/UI:** Глубокая темная тема, адаптивная сетка, утилитарные CSS-классы, плавные переходы.
+- **Breathing Practice:** Custom timer with high precision (50ms tick), SVG progress ring synchronization, and `Wake Lock API` to prevent screen sleep.
+- **Grounding Practice:** Interactive UI with random color generation, 5-step counting logic, and reset functionality.
+- **Progressive Muscle Relaxation:** Step-by-step guide with automated timers for tension (5s) and relaxation (15s) phases.
+- **Letting Go of Thoughts:** Input form with a fade-out animation simulating the destruction of negative thoughts.
+- **PWA Support:** Fully installable on iOS/Android home screens with automatic updates via Service Worker.
+- **Responsive Design:** Adapted for all devices from 320px mobile screens to 4K monitors.
 
-## 🚀 Как запустить локально
+## Architectural Decisions
+
+- **Separation of Concerns:** All business logic is extracted into custom hooks (`useBreathingTimer`, `useLockBodyScroll`), keeping UI components clean and focused on rendering.
+- **A11y (Accessibility):**
+  - Full focus trap in modals and `Escape` key support.
+  - `prefers-reduced-motion` support to disable animations for users with vestibular disorders.
+  - Semantic HTML and correct `aria-label` attributes.
+- **Testing:** 11 tests written covering critical paths (unit tests for hooks, integration tests for navigation, UI tests for modals and forms).
+
+## Getting Started Locally
 
 ```bash
-# 1. Клонировать репозиторий
-git clone https://github.com/meta-architectG/breathe-react.git
+# 1. Clone the repository
+git clone https://github.com/meta-architectG/relaxation-practice.git
 
-# 2. Установить зависимости
+# 2. Install dependencies
 npm install
 
-# 3. Запустить dev-сервер
+# 3. Start the dev server
 npm run dev
 ```
